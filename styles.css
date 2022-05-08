@@ -1,0 +1,92 @@
+h1 {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(173, 227, 235);
+}
+
+ul {
+    list-style: none;
+    font-size: xx-large;
+    padding: 0px;
+    color: rgb(83, 81, 81);
+}
+
+h2 {
+    position: relative;
+    text-align: left;
+}
+
+h3 {
+    position: relative;
+    text-align: left;
+}
+
+form {
+    display: block;
+    text-align: center;
+}
+
+.weather-app {
+    border-radius: 10px;
+    margin: 100px 15px 100px 100px;
+    padding: 20px;
+    box-shadow: 0px 5px 10px 10px grey;
+    background: linear-gradient(181.2deg, rgb(181, 239, 249) 10.5%, rgb(254, 254, 254) 86.8%);
+    );
+}
+
+.hour {
+    display: block;
+    left: 100px 20px 20px 20px;
+    font-size: xx-large;
+    background-color: cadetblue;
+    opacity: 0.9;
+}
+
+.hour-text {
+    color: rgb(12, 11, 10);
+}
+
+.temp {
+    display: block;
+    text-align: left;
+    font-size: x-large;
+}
+
+.week {
+    display: block;
+    left: 100px 20px 20px 20px;
+    font-size: xx-large;
+    background-color: darkseagreen;
+}
+
+.units {
+    position: relative;
+    top: -20px;
+    font-size: small;
+    line-height: 5px;
+}
+
+.card {
+    margin: 20px;
+    padding: 0px;
+    opacity: 0.5;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.wind {
+    text-align: center;
+}
+
+.scroll {
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.currentHour {
+    color: rgb(83, 81, 81);
+}
