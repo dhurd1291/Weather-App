@@ -28,12 +28,12 @@ form {
 }
 
 .weather-app {
+    padding: 15px;
+    margin: 20px auto;
     border-radius: 10px;
-    margin: 100px 15px 100px 100px;
-    padding: 20px;
+    max-width: 600px;
     box-shadow: 0px 5px 10px 10px grey;
     background: linear-gradient(181.2deg, rgb(181, 239, 249) 10.5%, rgb(254, 254, 254) 86.8%);
-    );
 }
 
 .hour {
