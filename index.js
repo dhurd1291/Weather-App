@@ -72,5 +72,3 @@ function checkTheWeather(response) {
   let roundedTemp = Math.round(response.data.main.temp);
   currentTemp.innerHTML = `${roundedTemp}°`;
 }
-
-
