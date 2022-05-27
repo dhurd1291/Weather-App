@@ -72,3 +72,8 @@ function checkTheWeather(response) {
   let roundedTemp = Math.round(response.data.main.temp);
   currentTemp.innerHTML = `${roundedTemp}°`;
 }
+
+function weatherDescription (response){
+  let weatherDescription = document.querySelector(".weatherDescription")
+  weatherDescription.innerHTML = response.data.weather[0].description;
+}
