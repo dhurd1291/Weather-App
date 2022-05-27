@@ -90,3 +90,7 @@ form {
 .currentHour {
     color: rgb(83, 81, 81);
 }
+
+.weatherDescription{
+    text-transform: capitalize;
+}

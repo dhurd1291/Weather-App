@@ -48,7 +48,7 @@ let currentHour = document.querySelector(".currentHour");
 currentHour.innerHTML = `${hour}:${minutes}`;
 
 let currentDate = document.querySelector(".currentDate");
-currentDate.innerHTML = ` ${currentDay} ${currentMonth} ${date} ${currentYear}`;
+currentDate.innerHTML = ` ${currentDay}, ${currentMonth} ${date}, ${currentYear}`;
 
 function searchCity(event) {
   event.preventDefault();
@@ -71,9 +71,6 @@ function checkTheWeather(response) {
   let currentTemp = document.querySelector(".currentTemp");
   let roundedTemp = Math.round(response.data.main.temp);
   currentTemp.innerHTML = `${roundedTemp}°`;
-}
-
-function weatherDescription (response){
-  let weatherDescription = document.querySelector(".weather-Description")
-  weatherDescription.innerHTML =` ${response.data.weather[0].description}`
+  let weatherDescription = document.querySelector(".weatherDescription");
+  weatherDescription.innerHTML = `${response.data.weather[0].description}`;
 }
