@@ -75,5 +75,5 @@ function checkTheWeather(response) {
 
 function weatherDescription (response){
   let weatherDescription = document.querySelector(".weather-Description")
-  weatherDescription.innerHTML = response.data.weather[0].description;
+  weatherDescription.innerHTML =` ${response.data.weather[0].description}`
 }
