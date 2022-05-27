@@ -20,6 +20,7 @@ function formatAMPM(date) {
   return strTime;
 }
 
+
 let days = ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"];
 let currentDay = days[now.getDay()];
 let months = [
@@ -47,8 +48,8 @@ console.log(formatAMPM(new Date()));
 let currentHour = document.querySelector(".currentHour");
 currentHour.innerHTML = `${hour}:${minutes}`;
 
-let currentDate = document.querySelector(".currentDate");
-currentDate.innerHTML = ` ${currentDay}, ${currentMonth} ${date}, ${currentYear}`;
+let currentDate = document.querySelector(".date");
+currentDate.innerHTML = `${currentDay}, ${currentMonth} ${date}, ${currentYear}`;
 
 function searchCity(event) {
   event.preventDefault();
@@ -73,4 +74,8 @@ function checkTheWeather(response) {
   currentTemp.innerHTML = `${roundedTemp}°`;
   let weatherDescription = document.querySelector(".weatherDescription");
   weatherDescription.innerHTML = `${response.data.weather[0].description}`;
+   let iconElement = document.querySelector(".icon")
+  iconElement.innerHTML = `http://openweathermap.org/img/wn/10d@2x.png`;
+ 
 }
+
