@@ -71,11 +71,20 @@ function searchCityName(city) {
 function checkTheWeather(response) {
   let currentTemp = document.querySelector(".currentTemp");
   let roundedTemp = Math.round(response.data.main.temp);
-  currentTemp.innerHTML = `${roundedTemp}°`;
+  currentTemp.innerHTML = `${roundedTemp}`;
   let weatherDescription = document.querySelector(".weatherDescription");
   weatherDescription.innerHTML = `${response.data.weather[0].description}`;
    let iconElement = document.querySelector(".icon")
-  iconElement.innerHTML = `http://openweathermap.org/img/wn/10d@2x.png`;
- 
+iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
+
+function showCelsiusTemp (event){
+event.preventDefault();
+alert("link clicked");
+}
+
+
+let celsiusLink = document.querySelector(".celsiusLink");
+celsiusLink.addEventListener("click",showCelsiusTemp);
+
 
