@@ -79,12 +79,12 @@ iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.dat
 }
 
 function showCelsiusTemp (event){
-event.preventDefault();
+
 alert("link clicked");
 }
 
 
 let celsiusLink = document.querySelector(".celsiusLink");
-celsiusLink.addEventListener("click",showCelsiusTemp);
+celsiusLink.addEventListener("click", showCelsiusTemp);
 
 
