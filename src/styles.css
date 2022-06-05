@@ -61,9 +61,14 @@ form {
     background-color: darkseagreen;
 }
 
-.units {
+.fahrenheitLink {
    float: left;
-    font-size: small;
+    font-size: x-small;
+    line-height: 5px;
+}
+.celsiusLink {
+    float: left;
+    font-size: x-small;
     line-height: 5px;
 }
 
