@@ -62,8 +62,7 @@ form {
 }
 
 .units {
-    position: relative;
-    top: -20px;
+   float: left;
     font-size: small;
     line-height: 5px;
 }
@@ -93,4 +92,8 @@ form {
 
 .weatherDescription{
     text-transform: capitalize;
+    margin: 10px;
+}
+.windSpeed{
+    font-size: small;
 }

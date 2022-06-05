@@ -21,7 +21,7 @@ function formatAMPM(date) {
 }
 
 
-let days = ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"];
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let currentDay = days[now.getDay()];
 let months = [
   "Jan",
@@ -49,7 +49,7 @@ let currentHour = document.querySelector(".currentHour");
 currentHour.innerHTML = `${hour}:${minutes}`;
 
 let currentDate = document.querySelector(".date");
-currentDate.innerHTML = `${currentDay}, ${currentMonth} ${date}, ${currentYear}`;
+currentDate.innerHTML = `${currentDay} ${currentMonth} ${date} ${currentYear}`;
 
 function searchCity(event) {
   event.preventDefault();
@@ -69,13 +69,16 @@ function searchCityName(city) {
 }
 
 function checkTheWeather(response) {
- let currentTemp = document.querySelector("#temp");
+ let currentTemp = document.querySelector(".currentTemp");
   let roundedTemp = Math.round(response.data.main.temp);
-  currentTemp.innerHTML = `${roundedTemp}`;
+  currentTemp.innerHTML = `${roundedTemp}°`;
   let weatherDescription = document.querySelector(".weatherDescription");
   weatherDescription.innerHTML = `${response.data.weather[0].description}`;
    let iconElement = document.querySelector(".icon")
 iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+let windSpeed = document.querySelector(".windSpeed")
+let roundWind = Math.round(response.data.wind.speed)
+windSpeed.innerHTML=`Wind speed: ${roundWind} MPH`;
 }
 
 function showCelsiusTemp(event) {
@@ -84,9 +87,6 @@ function showCelsiusTemp(event) {
 }
 
 let celsiusLink = document.querySelector("#celsiusLink");
-celsiusLink.addEventListener("click", showCelsiusTemp);
-
-let celsiusLink = document.querySelector(".celsiusLink");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
 
