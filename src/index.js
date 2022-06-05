@@ -69,7 +69,7 @@ function searchCityName(city) {
 }
 
 function checkTheWeather(response) {
-  let currentTemp = document.querySelector(".currentTemp");
+ let currentTemp = document.querySelector("#temp");
   let roundedTemp = Math.round(response.data.main.temp);
   currentTemp.innerHTML = `${roundedTemp}`;
   let weatherDescription = document.querySelector(".weatherDescription");
@@ -78,11 +78,13 @@ function checkTheWeather(response) {
 iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
-function showCelsiusTemp (event){
-
-alert("link clicked");
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  alert("link clicked");
 }
 
+let celsiusLink = document.querySelector("#celsiusLink");
+celsiusLink.addEventListener("click", showCelsiusTemp);
 
 let celsiusLink = document.querySelector(".celsiusLink");
 celsiusLink.addEventListener("click", showCelsiusTemp);
