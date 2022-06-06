@@ -80,6 +80,7 @@ let windSpeed = document.querySelector(".windSpeed");
 let roundWind = Math.round(response.data.wind.speed);
 windSpeed.innerHTML=`Wind speed: ${roundWind} MPH`;
 farenheitTemp = response.data.main.temp
+displayForecast();
 
 }
 
@@ -108,21 +109,22 @@ let farenheitTemp = null
 
 function displayForecast() {
 let forecast = querySelector(".weatherForecast")
-forecast.innerHTML =` 
-<div class = "weatherForecast">
+forecast.innerHTML =
+` 
               <div class = "row">
               <div class = "col-2"><div class="weather-forecast-date">Thursday</div>
-                <img src="https://cdn.shopify.com/s/files/1/2160/5629/products/Red_Apple_480x.png?v=1546481029"
+                <img src="https://clipart.world/wp-content/uploads/2020/06/apple-clipart.jpg"
                 alt=""
-                width="250"/><div class = weather-forecast-temperature>
-                <span class="temp-high">18°</span> <span class="temp-low">12°</span></div>
-               
-             </div> 
+                width="250"/>
+                <div class = weather-forecast-temperature>
+                <span class="temp-high">18°</span>
+                 <span class="temp-low">12°</span></div>
               </div>
+            </div>
             </div>
             `;
 }
 
-displayForecast();
+
 
 
