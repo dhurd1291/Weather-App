@@ -119,7 +119,8 @@ forecast.innerHTML =`
                
              </div> 
               </div>
-            </div>`
+            </div>
+            `;
 }
 
 displayForecast();
