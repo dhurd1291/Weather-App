@@ -108,23 +108,38 @@ fahrenheitLink.addEventListener("click", showfahrenheitTemp);
 let farenheitTemp = null
 
 function displayForecast() {
-let forecast = querySelector(".weatherForecast")
-forecast.innerHTML =
-` 
-              <div class = "row">
-              <div class = "col-2"><div class="weather-forecast-date">Thursday</div>
-                <img src="https://clipart.world/wp-content/uploads/2020/06/apple-clipart.jpg"
-                alt=""
-                width="250"/>
-                <div class = weather-forecast-temperature>
-                <span class="temp-high">18°</span>
-                 <span class="temp-low">12°</span></div>
-              </div>
-            </div>
-            </div>
-            `;
+  let forecastElement = document.querySelector(".weather-forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+        <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="42"
+        />
+        <div class="weather-forecast-temperatures">
+          <span class="temp-high"> 18° </span>
+          <span class="temp-low"> 12° </span>
+        </div>
+      </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
 }
 
+
+
+displayForecast();
 
 
 
