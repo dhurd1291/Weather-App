@@ -105,7 +105,8 @@ form {
 .weatherForecast{
     margin-top: 20px;
     text-align: center;
-    color:black
+    color:black;
+    position: relative;
 }
 .weather-forecast-date{
     font-size: 16px;
